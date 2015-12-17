@@ -1,0 +1,94 @@
+html,body,div,ul,li,svg{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+/*------------Global-------------*/
+html,body{
+    height: 100%;
+    position: relative;
+    /*background: rgb(255,255,255);*/
+    background: linear-gradient(to right, #ECE9E6 , #FFFFFF);
+}
+
+.container{
+    height:100%;
+}
+
+.container .canvas{
+    width:100%;
+    background:none;
+    height:600px;
+    position:relative;
+}
+
+
+.container .controls{
+    margin-bottom:5px;
+}
+section{
+    margin:20px 0;
+    padding:20px 0;
+    clear:both;
+    border-bottom:1px solid rgb(200,200,200);
+}
+header{
+    margin:0 0 0 25px;
+}
+.row{
+    width:400px;
+}
+
+/*-----------tooltip-----------*/
+.canvas .custom-tooltip{
+    position:absolute;
+    /*border:1px solid rgba(80,80,80,0.5);*/
+    background: rgba(200,200,200,0.3);
+    width:150px;
+    min-height:10px;
+    padding:0px 10px;
+    font-size: 14px;
+}
+
+/*-----------button------------*/
+.btn-group .btn-default{
+    font-size: 14px;
+}
+.btn-group .dropdown-menu{
+    font-size: 14px;
+    width: 100px;
+}
+.btn{
+    margin-right: 1px;
+}
+
+/*------------font-------------*/
+body{
+    font-family:'MaisonNeue', sans-serif;
+    font-size: 13px;
+}
+h1{ font-size: 30px;}
+h2{ font-size:18px;}
+p{ font-size: 14px;}
+
+/*------------svg--------------*/
+.axis .domain{
+    fill:none
+}
+.axis .tick line{
+    fill:none;
+    stroke:rgb(200,200,200);
+    stroke-width:1px;
+}
+.axis .tick text{
+    fill:rgb(80,80,80)
+}
+
+.data-point{
+    fill:white;
+    /*stroke-width:1px;
+    stroke:rgb(150,150,150);*/
+}
+.rating-data-point{ stroke:red; }
+.bl-data-point{ stroke:none; }
