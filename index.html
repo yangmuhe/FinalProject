@@ -10,50 +10,87 @@
     <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-<div class="container">
-    <header>
-    <div class="row">
-        <h1>Movie Data</h1>
-        <h2>some captions here........................</h2>
-    </div>
-    </header>
-
-    <div class="controls btn-group">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Times <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu">
-            <li><a href="#" class="year" id="1940s">1940s</a></li>
-            <li><a href="#" class="year" id="1950s">1950s</a></li>
-            <li><a href="#" class="year" id="1960s">1960s</a></li>
-            <li><a href="#" class="year" id="1970s">1970s</a></li>
-            <li><a href="#" class="year" id="1980s">1980s</a></li>
-            <li><a href="#" class="year" id="1990s">1990s</a></li>
-            <li><a href="#" class="year" id="2000s">2000s</a></li>
-        </ul>
-    </div>
-    <div class="controls btn-group">
-        <a href="#" class="btn btn-default producer" id="length">Length</a>
-        <a href="#" class="btn btn-default producer" id="budget">Budget</a>
-    </div>
-
-    <div class="canvas" id="plot">
-        <div class="custom-tooltip">
-            <h2 id="title"></h2>
-            <p>Year: <span id="year"></span></p>
-            <p>Rating: <span id="rating"></span></p>
-            <p>Length: <span id="length-tooltip"></span> min</p>
-            <p>Budget: $<span id="budget-tooltip"></span></p>
+    <div class="container">
+        <header>
+        <div class="row">
+            <h1>All About Movies</h1>
+            <h2>Data visualization based on IMDb</h2>
         </div>
-    </div>
-</div><!--.container-->
+        </header>
 
+        <div class="controls btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Times <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#" class="year" id="1940s">1940s</a></li>
+                <li><a href="#" class="year" id="1950s">1950s</a></li>
+                <li><a href="#" class="year" id="1960s">1960s</a></li>
+                <li><a href="#" class="year" id="1970s">1970s</a></li>
+                <li><a href="#" class="year" id="1980s">1980s</a></li>
+                <li><a href="#" class="year" id="1990s">1990s</a></li>
+                <li><a href="#" class="year" id="2000s">2000s</a></li>
+                <li><a href="#" class="year" id="1940-2005">1940 – 2005</a></li>
+            </ul>
+        </div>
+        <div class="controls btn-group">
+            <a href="#" class="btn btn-default producer" id="length">Length</a>
+            <a href="#" class="btn btn-default producer" id="budget">Budget</a>
+        </div>
+
+        <div class="canvas" id="plot">
+            <div class="custom-tooltip"></div>
+        </div>
+    </div><!--.container-->
+
+    <div class="animation-timeline">
+        <div class="scene" id="scene-1"></div>
+        <section class="scene" id="scene-2">
+            <div class="scene-commentary">
+                <h2>Click Buttons</h2><br>
+                <strong>Times</strong>
+                <p>Click dropdown button and choose different periods to show ratings of movies for each year, or choose 1940 – 2000 for all periods.</p>
+                <p>This part is designed for audiences, who can pick movies according to year and rating.</p>
+                <br>
+                <strong>Length/Budget</strong>
+                <p>Show the changes of length/budget of movies from 1940 to 2005, with the line showing the average.</p>
+                <p>This part is designed for movie producers, who can observe the trends over 65 years.</p>
+            </div>
+        </section>
+        <section class="scene" id="scene-3">
+            <div class="scene-commentary">
+                <h2>Interaction</h2><br>
+                <p>Hover mouse over the circles to see detailed information.</p>
+                <p>Click circles to mark and compare in different plots.</p>
+                <br><br><br>
+                <h2>Color-coding</h2><br>
+                <p>Circles are color-coded by genre.</p>
+            </div>
+        </section>
+        <section class="scene" id="scene-4">
+            <div class="scene-commentary">
+                <h2>Afterword</h2><br>
+                <p>The reason why I chose the movie topic is that I myself am a loyal user of a website called <a href="http://movie.douban.com/" target="_blank">Douban</a>, the Chinese version of IMDb.
+                    I always look up the rating before deciding to watch a movie.
+                    So I believe data visualization like this project can somewhat help audiences like myself to choose more reliable movies.</p>
+                <br><br>
+                <p>Movies shown here are those whose votes are more than 1000.</p>
+                <p>The data are not up-to-date.</p>
+                <p>For more information please go to <a href="http://www.imdb.com/" target="_blank">here</a></p>
+                <br><br><br><br><br>
+                <p>Designed by Muhe Yang</p>
+            </div>
+        </section>
+    </div>
+</body>
 
 <!-- Scripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="bower_components/bootstrap/js/bootstrap.min.js"></script>
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="queue/queue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+<script src="bower_components/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
 <script src="script.js"></script>
-</body>
+
 </html>
