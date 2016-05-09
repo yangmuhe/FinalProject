@@ -1,0 +1,122 @@
+html,body,div,ul,li,svg{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+/*------------Global-------------*/
+html,body{
+    height: 100%;
+    position: relative;
+    background: linear-gradient(to right, #ECE9E6 , #FFFFFF);
+}
+
+body .container{
+    height:100%;
+    margin-left: 60px;
+    margin-right:200px;
+    overflow:hidden;
+    position:fixed;
+    z-index:0;
+}
+
+.container .canvas{
+    width:100%;
+    height:600px;
+    background:none;
+    position:relative;
+    overflow:hidden;
+    z-index:1;
+}
+
+.container .controls{
+    margin-bottom:5px;
+}
+section{
+    margin: 0 0 0 0;
+    padding:20px 0;
+    clear:both;
+    border-bottom:1px solid rgb(200,200,200);
+}
+
+header{
+    margin:0 0 0 18px;
+}
+.row{
+    width:400px;
+}
+
+/*-----------tooltip-----------*/
+.canvas .custom-tooltip{
+    position:absolute;
+    background: rgba(200,200,200,0.3);
+    width:150px;
+    min-height:0;
+    padding:0 10px 0 10px;
+}
+
+/*-----------button------------*/
+.btn-group .btn-default{
+    font-size: 14px;
+    margin-right: 3px;
+}
+.btn-group .dropdown-toggle{
+    font-size: 14px;
+    width: 80px;
+    margin-right: 15px;
+}
+#budget{
+    margin-right: 15px;
+}
+
+/*------------font-------------*/
+body{
+    font-family:'MaisonNeue', sans-serif;
+    font-size: 13px;
+}
+h1{ font-size: 33px;}
+h2{ font-size:18px;}
+p{ font-size: 13px;}
+strong{ font-size: 13px;
+        font-weight: bold}
+
+/*------------svg--------------*/
+.axis .domain{
+    fill:none
+}
+.axis .tick line{
+    fill:none;
+    stroke:rgb(200,200,200);
+    stroke-width:1px;
+}
+.axis .tick text{
+    fill:rgb(80,80,80);
+    font-size: 13px;
+}
+
+.data-point{
+    fill:white;
+}
+
+.data-line{
+    fill:none;
+    stroke-width:2px;
+    stroke:rgb(165,165,165);
+}
+
+/*-------- scroll-related ---------*/
+.animation-timeline{
+    margin-left:83%;
+    height:100%;
+    position:relative;
+}
+    .animation-timeline .scene{
+        height:100%;
+        width:100%;
+    }
+        .scene .scene-commentary{
+
+            z-index:9999;
+            padding: 20px 15px;
+            color:rgb(110,110,110);
+        }
